@@ -89,10 +89,25 @@ nav.nav-scrolled {
 .home-hero-wrapper {
   background-color: #0d1b2a;
   background-image:
-    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(15,123,108,0.18) 0%, transparent 70%),
-    url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 40L40 0' stroke='rgba(255,255,255,0.025)' stroke-width='1'/%3E%3C/svg%3E");
+    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(15,123,108,0.18) 0%, transparent 70%);
   padding: 120px 40px 112px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-muscle-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 130%;
+  width: auto;
+  opacity: 0.18;
+  pointer-events: none;
+  user-select: none;
+  filter: invert(1);
+  mix-blend-mode: screen;
 }
 
 .home-hero {
