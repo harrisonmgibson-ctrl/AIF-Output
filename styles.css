@@ -267,18 +267,20 @@ nav.nav-scrolled {
 .muscle-list {
   list-style: none;
   margin: 20px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
 }
 
 .muscle-list li {
   display: flex;
-  gap: 14px;
-  padding: 14px 18px;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
   background-color: #f8f7f4;
-  border-radius: 8px;
-  border-left: 2px solid #e5e7eb;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
   font-size: 0.94rem;
   color: #374151;
   line-height: 1.58;
@@ -290,17 +292,15 @@ nav.nav-scrolled {
 }
 
 .muscle-thumbnail {
-  width: 88px;
-  height: 88px;
+  width: 100%;
+  height: 200px;
   object-fit: contain;
-  border-radius: 6px;
-  background-color: #f0eeea;
-  flex-shrink: 0;
+  background-color: #eeecea;
+  display: block;
 }
 
 .muscle-text {
-  flex: 1;
-  min-width: 0;
+  padding: 14px 16px;
 }
 
 .exercise-pairing {
