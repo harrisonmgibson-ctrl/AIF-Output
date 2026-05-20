@@ -43,3 +43,29 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+// Progress indicator
+const indicator = document.getElementById('progressIndicator');
+if (indicator) {
+  const steps = indicator.querySelectorAll('.progress-step');
+  const sections = [...steps].map(s => document.querySelector('.' + s.dataset.section));
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const idx = sections.indexOf(entry.target);
+      if (idx !== -1) steps[idx].classList.toggle('active', entry.isIntersecting);
+    });
+  }, { threshold: 0.15 });
+  sections.forEach(s => s && io.observe(s));
+  window.addEventListener('scroll', () => {
+    indicator.classList.toggle('visible', window.scrollY > 200);
+  }, { passive: true });
+}
+
+// Back to top
+const backToTop = document.getElementById('backToTop');
+if (backToTop) {
+  window.addEventListener('scroll', () => {
+    backToTop.classList.toggle('visible', window.scrollY > 400);
+  }, { passive: true });
+  backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+}
