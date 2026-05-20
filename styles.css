@@ -287,35 +287,62 @@ nav.nav-scrolled {
 .muscle-list li strong {
   color: #111827;
   font-weight: 600;
+}
+
+.muscle-thumbnail {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+  border-radius: 6px;
+  background-color: #f0eeea;
   flex-shrink: 0;
+}
+
+.muscle-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.exercise-pairing {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #f3f4f6;
+  font-size: 0.85rem;
+  color: #6b7280;
+  line-height: 1.6;
+  font-style: italic;
 }
 
 .structures-list {
   list-style: none;
   margin: 16px 0;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
 
 .structures-list li {
   display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  font-size: 0.94rem;
-  color: #374151;
-  line-height: 1.58;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 16px;
+  background-color: #f8f7f4;
+  border: 1px solid #e5e7eb;
+  border-left: 2px solid #0f7b6c;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.55;
 }
 
 .structures-list li::before {
-  content: '';
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  background-color: #9ca3af;
-  border-radius: 50%;
-  margin-top: 9px;
-  flex-shrink: 0;
+  display: none;
+}
+
+.structures-list li strong {
+  color: #111827;
+  font-weight: 600;
+  font-size: 0.93rem;
 }
 
 .anatomy-note {
@@ -604,6 +631,10 @@ figcaption {
 
   .anatomy-section {
     max-width: 100%;
+  }
+
+  .structures-list {
+    grid-template-columns: 1fr 1fr;
   }
 
   .exercise-card-body {
