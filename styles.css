@@ -317,6 +317,10 @@ nav.nav-scrolled {
   display: block;
 }
 
+.muscle-thumbnail--wide {
+  height: 150px;
+}
+
 .muscle-text {
   padding: 14px 16px;
 }
