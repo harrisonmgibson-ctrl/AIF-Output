@@ -140,6 +140,55 @@ nav.nav-scrolled {
   margin: 0 auto;
 }
 
+/* ===== Homepage Full-Page Dark Mode ===== */
+.home-page {
+  background-color: #0d1b2a;
+}
+
+.home-page .hero-muscle-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+  z-index: 0;
+  opacity: 0.18;
+  filter: invert(1);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  user-select: none;
+  transform: none;
+}
+
+.home-page main {
+  position: relative;
+  z-index: 1;
+}
+
+.home-page .home-hero-wrapper {
+  background-color: transparent;
+  background-image: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(15,123,108,0.18) 0%, transparent 70%);
+}
+
+.home-page .how-to-guide-text {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.home-page footer {
+  background-color: transparent;
+  border-top-color: rgba(255, 255, 255, 0.1);
+  margin-top: 40px;
+}
+
+.home-page .footer-brand {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.home-page .footer-disclaimer {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 /* ===== Page Layout ===== */
 .page {
   max-width: 1200px;
