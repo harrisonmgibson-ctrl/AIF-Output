@@ -431,6 +431,91 @@ nav.nav-scrolled {
   color: #111827;
 }
 
+/* ===== Caution Note ===== */
+.caution-note {
+  margin-top: 20px;
+  padding: 18px 22px;
+  background-color: #fffbeb;
+  border-radius: 8px;
+  border-left: 2px solid #f59e0b;
+  font-size: 0.93rem;
+  color: #374151;
+  line-height: 1.68;
+}
+
+.caution-note strong {
+  color: #92400e;
+}
+
+/* ===== Exercise Dosage ===== */
+.exercise-dosage {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #f3f4f6;
+  font-size: 0.83rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.exercise-dosage strong {
+  color: #374151;
+  font-weight: 600;
+}
+
+/* ===== Progression Overview ===== */
+.progression-overview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.progression-overview-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6b7280;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.progression-phase {
+  padding: 16px 18px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  border-top: 3px solid;
+  font-size: 0.88rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.progression-phase h4 {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+.progression-phase p {
+  margin: 0;
+}
+
+.progression-phase.phase-acute {
+  border-top-color: #d1d5db;
+  background-color: #f9fafb;
+}
+
+.progression-phase.phase-strength {
+  border-top-color: #6b7280;
+  background-color: #f9fafb;
+}
+
+.progression-phase.phase-functional {
+  border-top-color: #111827;
+  background-color: #f9fafb;
+}
+
 /* ===== Bridge Section ===== */
 .bridge-section {
   background-color: #faf6f1;
@@ -723,6 +808,14 @@ figcaption {
 
   footer {
     padding: 32px 20px;
+  }
+
+  .progression-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .muscle-list {
+    grid-template-columns: 1fr;
   }
 }
 
